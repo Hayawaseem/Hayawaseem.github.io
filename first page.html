@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>Blossom Boutique - Home</title> 
+  <style>
+    * {
+      margin: 0; /* Remove extra margin from all elements */
+      padding: 0; /* Removes extra padding from all elements */
+      box-sizing: border-box; /* Ensures borders are included in element */
+    }
+
+    body, html {
+      height: 100%; /* Sets full height for body and html */
+      width: 100%; /* Sets full width for body and html */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a clean, modern font */
+      overflow: hidden; /* Hides any scrollbars */
+    }
+
+    .hero {
+      position: relative; /* Allows absolutely positioned */
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      background-image: url('https://images.unsplash.com/photo-1745929201306-5fc843dce4dc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Background floral image */
+      background-size: cover; /* Scales image to cover the entire section */
+      background-position: center; /* Centers the background image */
+    }
+
+    .overlay {
+      position: absolute; /* Places the overlay on top of the background */
+      top: 0; /* Aligns to top */
+      left: 0; /* Aligns to left */
+      height: 100%; /* Full height */
+      width: 100%; /* Full width */
+      background-color: rgba(255, 255, 255, 0.45); /* Transparent white overlay */
+      z-index: 1; /* Places overlay behind text and buttons */
+    }
+
+    h1 {
+      position: absolute; /* Allows manual placement on the screen */
+      top: -100px;
+      left: 50%; /* Centers horizontally */
+      transform: translateX(-50%); /* Adjusts for perfect horizontal center */
+      font-size: 4rem; /* Large text size */
+      color: #3a2e2e; /* Brown color for text */
+      font-weight: bold; /* Makes text bold */
+      animation: slideDown 1.5s ease-out forwards; /* Applies animation for slide down */
+      z-index: 2; /* Ensures the heading appears above the overlay */
+      text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8); /* Adds glow behind the text */
+    }
+
+    @keyframes slideDown {
+      to {
+        top: 40%; 
+        transform: translate(-50%, -50%); /* Perfect vertical and horizontal centering */
+      }
+    }
+
+    .shop-btn {
+      position: absolute; /* Manual positioning */
+      top: 60%; /* Places button lower on the page */
+      left: 50%; /* Centers horizontally */
+      transform: translate(-50%, -50%); /* Perfect centering */
+      padding: 15px 30px; /* Inner spacing */
+      font-size: 1.2rem; /* Medium text size */
+      background-color: #f8dce2; /* Light pink background */
+      color: #3a2e2e; /* Brown text color */
+      border: none; /* Removes default border */
+      border-radius: 8px; /* Rounded corners */
+      cursor: pointer; /* Pointer cursor on hover */
+      z-index: 2; /* Above overlay */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    }
+
+    .shop-btn:hover {
+      background-color: #f1cbd3; /* Slightly darker pink when hovered */
+    }
+  </style>
+</head>
+<body>
+  <div class="hero"> <!-- Fullscreen section with background image -->
+    <div class="overlay"></div> <!-- Transparent overlay for softening background -->
+    <h1>Blossom Boutique</h1> <!-- Animated heading text -->
+    <a href="index.html"><button class="shop-btn">Shop Now</button></a> <!-- Button linking to index.html -->
+  </div>
+</body>
+</html>
